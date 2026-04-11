@@ -8,16 +8,183 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <h1>Team 23 Meeting 041026</h1>
-    <p>Attendees: Alice, Bob, Charlie, Dave</p>
-    <h2>Agenda</h2>
-    <ol>
-      <li>Project Updates</li>
-      <li>Task Assignments</li>
-      <li>Next Steps</li>
-    </ol>
-    <h2>Meeting Notes</h2>
-    <p>Alice provided an update on the project timeline. Bob discussed the current challenges with the implementation. Charlie shared insights on the user feedback received. Dave outlined the next steps for the team.</p>
-    <h2>Action Items</h2>
+    <header style="background-color: #f8f9fa; padding: 20px; text-align: center; border-bottom: 1px solid #dee2e6;">
+      <h1 style="margin: 0; color: #343a40;">Team 23 Meeting 041026</h1>
+    </header>
+    
+    <hr>
+
+    <nav>
+      <!-- Navigation menu can go here -->
+      <a href="#agenda">Agenda</a> | 
+      <a href="#notes">Meeting Notes</a> | 
+      <a href="#actions">Actions</a>
+    </nav>
+
+    <hr>
+
+    <main>
+      <section>
+        <div class="attendees">
+          <p>Attendees: <span class="attendee">Alice</span>, <span class="attendee">Bob</span>, <span class="attendee">Charlie</span>, <span class="attendee">Dave</span></p>
+          
+          <details>
+            <summary>Contact Information</summary>
+            <ul>
+              <li>Alice Johnson - <a href="mailto:alice@company.com">alice@company.com</a> - Project Manager</li>
+              <li>Bob Smith - <a href="mailto:bob@company.com">bob@company.com</a> - Lead Developer</li>
+              <li>Charlie Brown - <a href="mailto:charlie@company.com">charlie@company.com</a> - QA Engineer</li>
+              <li>Dave Wilson - <a href="mailto:dave@company.com">dave@company.com</a> - Product Owner</li>
+            </ul>
+          </details>
+        </div>
+      </section>
+      
+      <hr>
+
+      <section>
+        <h2>Agenda</h2>
+        <ol>
+          <li>Project Updates</li>
+          <li>Task Assignments</li>
+          <li>Next Steps</li>
+        </ol>
+      </section>
+      
+      <hr>
+
+      <section>
+        <h2>Meeting Notes</h2>
+        <p>Very productive meeting with all attendees present. Product should be shipped by the end of the month.</p>
+        
+        <details>
+          <summary>Technical Discussion Details</summary>
+          <p><strong>Bob mentioned bug in the login functionality.</strong> The issue occurs when users try to reset their password - the confirmation email is not being sent. This affects approximately 15% of login attempts.</p>
+          <p><em>Priority: High - Must be resolved before the next meeting in 3 days.</em></p>
+        </details>
+        
+        <details>
+          <summary>Timeline Updates</summary>
+          <p>Alice presented the revised project timeline. Key milestones:</p>
+          <ul>
+            <li>Alpha release: April 15th</li>
+            <li>Beta testing: April 20th</li>
+            <li>Final release: April 30th</li>
+          </ul>
+        </details>
+        
+        <p>See the <a href="project-timeline.pdf" target="_blank">Project timeline document</a> for details.</p>
+      </section>
+
+      <i>Note: Alice's birthday is in a week.</i>
+
+      <hr>
+      
+      <section>
+        <h2>Actions</h2>
+        <div class="action-items">
+          <details>
+            <summary><span class="person"><b>Alice</b></span>: Update project timeline</summary>
+            <p>Due: April 12th</p>
+            <p>Update the timeline document with revised milestones and share with the team.</p>
+          </details>
+          
+          <details>
+            <summary><span class="person"><b>Bob</b></span>: Address implementation challenges</summary>
+            <p>Due: April 13th</p>
+            <p>Fix the login bug and test thoroughly. Coordinate with Charlie for user testing.</p>
+          </details>
+          
+          <details>
+            <summary><span class="person"><b>Charlie</b></span>: Analyze user feedback</summary>
+            <p>Due: April 14th</p>
+            <p>Review all user feedback from beta testing and create summary report.</p>
+          </details>
+          
+          <details>
+            <summary><span class="person"><b>Dave</b></span>: Define next steps for the team</summary>
+            <p>Due: April 15th</p>
+            <p>Prepare agenda and action items for next week's meeting.</p>
+          </details>
+        </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Favorite Dessert</h2>
+        <form action="/submit-dessert" method="post">
+          <fieldset>
+            <h3>Tell us about your favorite dessert!</h3>
+
+            <label for="person-name">Name:</label>
+            <input type="text" id="person-name" name="person-name" list="team-members" required>
+            <datalist id="team-members">
+              <option value="Alice">
+              <option value="Bob">
+              <option value="Charlie">
+              <option value="Dave">
+            </datalist>
+
+            <br><br>
+
+            <label for="favorite-dessert">Favorite Dessert:</label>
+            <select id="favorite-dessert" name="favorite-dessert" required>
+              <option value="">Choose a dessert</option>
+              <option value="cake">Cake</option>
+              <option value="ice-cream">Ice Cream</option>
+              <option value="cookies">Cookies</option>
+              <option value="pie">Pie</option>
+              <option value="brownies">Brownies</option>
+              <option value="pudding">Pudding</option>
+            </select>
+
+            <br><br>
+
+            <label for="reason">Why is this your favorite?</label><br>
+            <textarea id="reason" name="reason" rows="3" cols="40" placeholder="Tell us why you love this dessert..."></textarea>
+
+            <br><br>
+
+            <button type="submit">Share My Favorite</button>
+            <button type="reset">Start Over</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <hr>
+
+      <section>
+        <h2>Fun Media Examples</h2>
+        <p>Below are examples of image, audio, and video elements that do not have to relate to the meeting.</p>
+
+        <div>
+          <h3>Image</h3>
+          <img src="https://via.placeholder.com/400x200.png?text=Dessert+Image" alt="Example dessert image" width="400">
+        </div>
+
+        <div>
+          <h3>Audio</h3>
+          <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <div>
+          <h3>Video</h3>
+          <video controls width="480">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video element.
+          </video>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Team 23<br>
+      <a href="mailto:team23@company.com">team23@company.com</a><br>
+      </p>
+    </footer>
   </body>
 </html>
