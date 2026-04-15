@@ -8,7 +8,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <header style="background-color: #f8f9fa; padding: 20px; text-align: center; border-bottom: 1px solid #dee2e6;">
+    <header style="background-color: #ffffff; padding: 20px; text-align: center; border-bottom: 1px solid #dee2e6;">
       <h1 style="margin: 0; color: #343a40;">Team 23 Meeting 041026</h1>
     </header>
     
@@ -18,7 +18,8 @@
       <!-- Navigation menu can go here -->
       <a href="#agenda">Agenda</a> | 
       <a href="#notes">Meeting Notes</a> | 
-      <a href="#actions">Actions</a>
+      <a href="#actions">Actions</a> | 
+      <a href="#media">Media</a>
     </nav>
 
     <hr>
@@ -72,8 +73,6 @@
             <li>Final release: April 30th</li>
           </ul>
         </details>
-        
-        <p>See the <a href="project-timeline.pdf" target="_blank">Project timeline document</a> for details.</p>
       </section>
 
       <i>Note: Alice's birthday is in a week.</i>
@@ -111,9 +110,42 @@
 
       <hr>
 
+      <section id="media">
+        <h2>Media</h2>
+        <p>Things that happened during the meeting.</p>
+
+        <div>
+          <h3>Image</h3>
+          <img src="https://ribboncommunications.com/sites/default/files/microsoft-teams-direct-routing-survivablility_0.png" alt="Plan of today's meeting" width="400">
+        </div>
+
+        <div>
+          <h3>Audio</h3>
+          <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <div>
+          <h3>Video</h3>
+          <video controls width="480">
+            <source src="video2.mov" type="video/quicktime">
+            <source src="video2.mov" type="video/mp4">
+            Your browser does not support the video element.
+          </video>
+        </div>
+      </section>
+    </main>
+    
+      <hr>
+
       <section>
         <h2>Favorite Dessert</h2>
-        <form action="/submit-dessert" method="post">
+        <div id="success-message" style="display: none; background-color: #d4edda; color: #155724; padding: 10px; margin-bottom: 10px; border-radius: 4px;">
+          ✓ Thank you! Your favorite dessert has been submitted.
+        </div>
+        <form id="dessert-form">
           <fieldset>
             <h3>Tell us about your favorite dessert!</h3>
 
@@ -146,40 +178,22 @@
 
             <br><br>
 
-            <button type="submit">Share My Favorite</button>
+            <button type="button" onclick="submitDessert()">Share My Favorite</button>
             <button type="reset">Start Over</button>
           </fieldset>
         </form>
+
+        <script>
+          function submitDessert() {
+            document.getElementById('dessert-form').reset();
+            const successMsg = document.getElementById('success-message');
+            successMsg.style.display = 'block';
+            setTimeout(() => {
+              successMsg.style.display = 'none';
+            }, 3000);
+          }
+        </script>
       </section>
-
-      <hr>
-
-      <section>
-        <h2>Fun Media Examples</h2>
-        <p>Below are examples of image, audio, and video elements that do not have to relate to the meeting.</p>
-
-        <div>
-          <h3>Image</h3>
-          <img src="https://via.placeholder.com/400x200.png?text=Dessert+Image" alt="Example dessert image" width="400">
-        </div>
-
-        <div>
-          <h3>Audio</h3>
-          <audio controls>
-            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-
-        <div>
-          <h3>Video</h3>
-          <video controls width="480">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            Your browser does not support the video element.
-          </video>
-        </div>
-      </section>
-    </main>
 
     <footer>
       <p>Team 23<br>
