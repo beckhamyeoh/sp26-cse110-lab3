@@ -15,4 +15,4 @@ Annie, Bonnie, Connie, Donnie
 | Annie | Test website functionality |
 | Bonnie | Write CSS file |
 | Connie | Contact client for additional features |
-| Donnie | Get snacks |
+| Donnie | Restock snacks for team |
