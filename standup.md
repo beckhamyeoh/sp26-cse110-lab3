@@ -9,6 +9,7 @@ Annie, Bonnie, Connie, Donnie
 - [x] Write HTML for website
 - [ ] Write CSS file
 - [ ] Publish website
+
 | Name | Task |
 | --- | --- |
 | Annie | Test website functionality |
