@@ -1,0 +1,135 @@
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* CSS Variables*/
+:root {
+  --main-bg: lavender;
+}
+
+/* Named color, CSS variable & fallback, Google Font applied */
+body {
+  background-color: var(--main-bg, lightyellow);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background and short margin & padding */
+section {
+  background-color: lightgray;
+  padding: 1pc 1pc 1pc 1pc;    /* pc */
+  margin: 12px 1px 1px 1px;   /* px */
+}
+
+/* Hex code and long padding */
+header {
+  background-color: #FFFFFF;
+  color: #222;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+/* rgb and border */
+nav {
+  background-color: rgb(240, 240, 240);
+  padding: 10px;
+  text-align: center;
+  border-style: solid;
+  border-color: gray;
+  border-width: 1px;
+  border-radius: .2cm;    /* cm */
+  max-width: 60rem;       /* max-width */
+  max-height: 10em;     /* max-height */
+  margin: 0 auto;           /* auto margin */
+  position: sticky;   /* sticks to top when scrolling */
+  top: 0;
+  z-index: 10;
+}
+
+/* hsl */
+h2 {
+  color: hsl(210, 60%, 30%);
+  border-left: .2em solid hsla(210, 60%, 30%, 0.5);    /* em */
+  padding-left: .5rem;  /* rem */
+  text-decoration: underline wavy red 2px;
+}
+
+/* Wider-gamut color */
+.attendee {
+  background-color: color(display-p3 0.2 0.5 1 / 0.85);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 90%;   /* percentage */
+  display: inline-block;   /* display: inline-block */
+  position: relative;   /* nudges from normal position */
+  top: -1px;
+}
+
+/* display: block */
+label {
+  display: block;
+}
+
+/* color-mix and long margin */
+button {
+  background-color: color-mix(in srgb, blue 70%, white 30%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-right: 4px;
+  margin-bottom: 8px;
+  margin-left: 0;
+}
+
+/* :hover */
+button:hover {
+  background-color: color-mix(in srgb, blue 85%, black 15%);
+}
+
+/* :active */
+button:active {
+  background-color: color-mix(in srgb, blue 60%, black 40%);
+  transform: translateY(1px);
+}
+
+/* Flexbox */
+#media {
+  display: flex;
+  flex-wrap: wrap;         /* lets items drop to next line on small screens */
+  justify-content: center; /* centers items along the main axis */
+  align-items: flex-start; /* aligns items to top along cross axis */
+  gap: 1rem;               /* space between items */
+}
+
+/* Grid */
+.action-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* 2 equal columns */
+  grid-auto-rows: auto;             /* rows size to content */
+  gap: 10px;                        /* space between cells */
+}
+
+/* Responsiveness for screens narrower than 600px */
+@media (max-width: 600px) {
+  .action-items {
+    grid-template-columns: 1fr;   /* stack action items into one column */
+  }
+
+  header {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  /* width and height */
+  video {
+    width: 480px;
+    height: 270px;
+  }
+}
