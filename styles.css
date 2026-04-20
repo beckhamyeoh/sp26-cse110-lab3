@@ -1,7 +1,76 @@
-/* Google Font import */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Google Font imports — Poppins for body, Playfair Display for headings */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
 
-/* CSS Variables*/
+/* Universal selector */
+* {
+  box-sizing: border-box;
+}
+
+/* Element selector */
+a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+/* Attribute selector: starts with "mailto:" */
+a[href^="mailto:"] {
+  color: teal;
+  font-style: italic;
+}
+
+/* Selector list */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+/* Descendant combinator */
+nav a {
+  padding: 4px 8px;
+  font-weight: 600;
+}
+
+/* Child combinator */
+.action-items > details {
+  background-color: #f5f5f5;
+  padding: 6px;
+}
+
+/* General sibling combinator */
+h2 ~ p {
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Adjacent sibling combinator — the input immediately after a label */
+label + input {
+  margin-left: 4px;
+}
+
+/* Combining two selectors — <span> that also has class "attendee" */
+span.attendee {
+  font-weight: 600;
+}
+
+/* :has() */
+section:has(h2) {
+  padding-top: 1.5rem;
+}
+
+/* Nested selectors — rules written inside their parent selector */
+.attendees {
+  margin: 1rem 0;
+
+  p {                  /* equivalent to ".attendees p" */
+    margin: 0;
+  }
+
+  details {            /* equivalent to ".attendees details" */
+    margin-top: 0.5rem;
+  }
+}
+
+/* CSS Variables */
 :root {
   --main-bg: lavender;
 }
@@ -55,7 +124,7 @@ h2 {
   text-decoration: underline wavy red 2px;
 }
 
-/* Wider-gamut color */
+/* Class selector and Wider-gamut color */
 .attendee {
   background-color: color(display-p3 0.2 0.5 1 / 0.85);
   color: white;
@@ -97,7 +166,7 @@ button:active {
   transform: translateY(1px);
 }
 
-/* Flexbox */
+/* ID selector and Flexbox */
 #media {
   display: flex;
   flex-wrap: wrap;         /* lets items drop to next line on small screens */
