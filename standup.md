@@ -4,7 +4,7 @@
 ## Team:
 abcd
 ## Participants:
-Annie, Bonnie, Connie, Donnie
+Alice, Bob, Charlie, Dave
 ## Progress:
 - [x] Write HTML for website
 - [ ] Write CSS file
@@ -12,7 +12,7 @@ Annie, Bonnie, Connie, Donnie
 
 | Name | Task |
 | --- | --- |
-| Annie | Test website functionality |
-| Bonnie | Write CSS file |
-| Connie | Contact client for additional features |
-| Donnie | Restock snacks for team |
+| Alice | Test website functionality |
+| Bob | Write CSS file |
+| Charlie | Contact client for additional features |
+| Dave | Restock snacks for team |
