@@ -169,9 +169,8 @@ button:active {
 /* ID selector and Flexbox */
 #media {
   display: flex;
-  flex-wrap: wrap;         /* lets items drop to next line on small screens */
-  justify-content: center; /* centers items along the main axis */
-  align-items: flex-start; /* aligns items to top along cross axis */
+  flex-direction: column;  /* stack items vertically */
+  align-items: flex-start; /* align each item to the left */
   gap: 1rem;               /* space between items */
 }
 
@@ -180,6 +179,7 @@ button:active {
   display: grid;
   grid-template-columns: 1fr 1fr;   /* 2 equal columns */
   grid-auto-rows: auto;             /* rows size to content */
+  align-items: start;               /* each item keeps its own height */
   gap: 10px;                        /* space between cells */
 }
 
